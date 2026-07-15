@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "OURAA | Premium Beats For Your Sound",
   description:
     "Buy premium beats, royalty-free licenses, and stems. Instant delivery after checkout.",
+  icons: {
+    icon: "/ouraa-mark.webp",
+  },
 }
 
 export default function RootLayout({

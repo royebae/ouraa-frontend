@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 
@@ -13,6 +14,12 @@ const textSizes = {
   lg: "text-4xl",
 }
 
+const markSizes = {
+  sm: 22,
+  md: 28,
+  lg: 40,
+}
+
 export function OurraWordmark({
   href = "/",
   size = "md",
@@ -21,13 +28,18 @@ export function OurraWordmark({
   const content = (
     <span
       className={cn(
-        "inline-flex items-baseline gap-0.5 font-extrabold tracking-tight",
+        "inline-flex items-center font-extrabold tracking-tight",
         textSizes[size],
         className,
       )}
     >
-      <span className="text-white">OUR</span>
-      <span className="text-primary">AA</span>
+      <Image
+        src="/ouraa-mark.webp"
+        alt="OURAA"
+        width={markSizes[size]}
+        height={markSizes[size]}
+        className="rounded-full shrink-0"
+      />
     </span>
   )
 
